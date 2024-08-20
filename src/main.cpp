@@ -37,7 +37,7 @@ void customPrintModelStructure(aimodel_t *model);
 void customPrintMemoryRequired(uint32_t parameter_memory_size, uint32_t memory_size, byte *memory_ptr);
 void customPrintTrainingSetup(uint16_t epochs, uint32_t batch_size, aiopti_t *optimizer, aimodel_t &model);
 void customPrintEpochOnInterval(uint32_t i, uint16_t print_interval, aimodel_t &model, aitensor_t &input_tensor, aitensor_t &target_tensor, float &loss, float &prevLoss, u_int32_t startTime, uint16_t epochs);
-void customPrintModelEvaluation(float target_data[4], float model_output_data[4], float input_data[4][2]);
+void customPrintModelEvaluation(float target_data[batch_size][output_size], float model_output_data[batch_size][output_size], float input_data[batch_size][input_size]);
 
 const uint16_t input_size = 784;
 const uint16_t output_size = 10;
